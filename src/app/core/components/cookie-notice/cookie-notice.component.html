@@ -1,0 +1,22 @@
+@if (isVisible) {
+<div
+  class="cookies d-flex flex-row align-items-center justify-content-evenly fixed-bottom"
+>
+  <div class="information">
+    <h1>Aviso de Cookies</h1>
+    <p>
+      Usamos os cookies para otimizar as funcionalidades, personalizar o
+      conteúdo e proporcionar melhor experiência de uso para você.
+    </p>
+    <p>
+      Saiba mais do <span>termo de uso</span> e
+      <span>política de privacidade</span>
+    </p>
+  </div>
+  <div class="btn-accept-cookies">
+    <app-button variant="solid" color="red" [onClick]="acceptCookies"
+      >Aceitar</app-button
+    >
+  </div>
+</div>
+}

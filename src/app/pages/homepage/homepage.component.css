@@ -1,0 +1,14 @@
+.icon-representing-ul{
+    background-color: #CC0000;
+    width: 18px;
+    height:21px;
+    border-radius: 0px 3px 0px 3px;
+    margin-right: 0.3rem;
+}
+aside{
+    border-left: 1px solid #c9c7c7;
+}
+
+.homepage{
+    min-height: 4000px;
+}

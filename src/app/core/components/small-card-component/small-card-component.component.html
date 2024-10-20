@@ -1,0 +1,13 @@
+<div class="no-img-highlight d-flex align-items-center flex-{{ flexType }}">
+  <div *ngFor="let item of news">
+    <div class="card-news d-flex">
+      <span *ngIf="item.id" class="number">{{ item.id }}</span>
+      <div>
+        <span class="news-title mt-3">{{ item.title }}</span>
+        <p class="description">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

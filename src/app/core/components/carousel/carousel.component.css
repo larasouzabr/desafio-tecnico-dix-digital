@@ -1,0 +1,11 @@
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffff;
+    border: none;
+}
+
+.carousel-indicators button.active {
+    background-color: #CC0000;
+}

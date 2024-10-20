@@ -1,0 +1,41 @@
+.input-group {
+    color: #ced4da;
+    width: 30%;
+}
+
+.input-group .input-group-text {
+    border: none;
+    background-color:  #ffff;
+}
+
+.form-control{
+    border: none; 
+
+}
+
+.navbar-nav .nav-item {
+    text-transform: uppercase;
+    color: #ffff;
+}
+
+.navbar-nav .nav-item .nav-link{
+   color: #FFFFFF;
+}
+.nav-link.active{
+    background-color: #CC0000;
+    border-radius: 0px 5px 0px 5px;
+ }
+ .navbar{
+    background-color: #454545;
+    border-bottom: 5px solid #CC0000;
+ }
+ .navbar-nav.categories{
+    display: contents;
+ }
+
+ .bi-search{
+    color: #CC0000
+ }
+ .navbar-nav .nav-item .nav-link .bi {
+    font-size: 22px;
+}

@@ -1,0 +1,9 @@
+.cookies{
+    background-color:#2B0707 ;
+    color: #ffff;
+    z-index: 11;
+}
+.information p span{
+    color: #3D50FF;
+    text-decoration: underline;
+}

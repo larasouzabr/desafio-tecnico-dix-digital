@@ -1,0 +1,27 @@
+<div
+  id="carouselExampleIndicators"
+  class="carousel slide"
+  data-bs-ride="carousel"
+  data-bs-interval="3000"
+>
+  <div class="carousel-indicators">
+    <button
+      *ngFor="let item of items; let i = index"
+      type="button"
+      [attr.data-bs-target]="'#carouselExampleIndicators'"
+      [attr.data-bs-slide-to]="i"
+      [class.active]="i === 0"
+      [attr.aria-current]="i === 0 ? 'true' : null"
+      [attr.aria-label]="'Slide ' + (i + 1)"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div
+      *ngFor="let item of items; let i = index"
+      class="carousel-item"
+      [class.active]="i === 0"
+    >
+      <img [src]="item.imageSrc" class="d-block w-100" [alt]="item.altText" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+img{
+    border-radius: 0px 8px 0px 8px;
+}
+.news-title{
+    color: #CC0000;
+    text-transform: uppercase;
+}
+.card-news{
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: justify;
+}
+
+.no-img-highlight .card-news .description{
+    font-weight: 400;
+}
+.divider{
+    background-color: #CC0000;
+    width: 6px;
+    height: 6rem;
+}
+
+.col-lg-4 img{
+    border-radius: 0;
+}

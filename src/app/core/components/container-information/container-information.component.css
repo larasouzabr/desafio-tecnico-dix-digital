@@ -1,0 +1,27 @@
+.main-content {
+    width: 100%;
+    min-height: 200px;
+    padding: 12px;
+        border-radius: 0px 8px 0px 8px;
+}
+
+h5{
+    text-transform: uppercase;
+}
+
+.main-content.bg-red {
+    background-color: #CC0000;
+    color: #f0f0f0;
+}
+
+.icon-representing-ul {
+    background-color: #CC0000;
+    width: 18px;
+    height: 21px;
+    border-radius: 0px 3px 0px 3px;
+    margin-right: 0.3rem;
+}
+
+.icon-representing-ul.bg-red {
+    background-color: #AFA9A9;
+}
