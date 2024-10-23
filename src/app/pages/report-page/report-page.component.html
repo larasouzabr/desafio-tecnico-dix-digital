@@ -1,0 +1,7 @@
+<div class="reportagens-container">
+  <app-card-section-page [colunist]="colunist"></app-card-section-page>
+  <h1>Reportagens de {{ colunistName }}</h1>
+  <div *ngFor="let report of reportagens">
+    <app-report-card [report]="report"></app-report-card>
+  </div>
+</div>

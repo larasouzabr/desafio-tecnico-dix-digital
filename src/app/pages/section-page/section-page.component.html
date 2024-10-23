@@ -1,0 +1,11 @@
+<div class="homepage">
+  <div class="main-content mt-4">
+    <div class="section-name d-flex align-items-strech">
+      <div class="icon-representing-ul"></div>
+      <h5>COLUNISTA</h5>
+    </div>
+    <div *ngFor="let colunist of colunists">
+      <app-card-section-page [colunist]="colunist"></app-card-section-page>
+    </div>
+  </div>
+</div>

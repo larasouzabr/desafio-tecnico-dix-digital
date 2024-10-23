@@ -1,15 +1,7 @@
-<div class="mt-2 homepage">
-  <img src="https://placehold.co/1536x155" class="img-fluid" alt="..." />
-  <link
-    rel="stylesheet"
-    type="text/css"
-    media="screen"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-  />
-
+<div class="homepage">
   <div class="main-content mt-4">
     <div class="row">
-      <div class="col-md-8 col-lg-8">
+      <div>
         <div class="section-name d-flex align-items-center">
           <div class="icon-representing-ul"></div>
           <h5>DESTAQUES</h5>
@@ -21,29 +13,13 @@
         </div>
         <app-most-read></app-most-read>
         <app-container-information
-          [bgColor]="'red'"
+          theme="red"
           sectionName="Política"
         ></app-container-information>
         <app-container-information
           sectionName="Geral"
         ></app-container-information>
       </div>
-
-      <aside class="col-md-4 col-lg-4">
-        <div class="row h-100 m-0">
-          <div class="col-md-12 col-lg-12">
-            <div class="row h-100">
-              <div class="col-md-6 col-lg-12">
-                <img
-                  src="https://placehold.co/300x300"
-                  class="img-fluid"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
     </div>
   </div>
 </div>
