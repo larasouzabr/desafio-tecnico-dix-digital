@@ -5,7 +5,7 @@ import { catchError } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
 import { City } from '../core/models/News';
 import { mockCitiesService } from './moked-api/mockCitiesService';
-import { environment } from '../../enviroments/enviroment';
+import { environment } from '../../enviroments/environment.prod';
 @Injectable({
   providedIn: 'root',
 })
@@ -15,9 +15,10 @@ export class CitiesService {
     private mockCitiesService: mockCitiesService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
-  private token = environment.bearerToken;
-  private useMockApi = environment.mockApiData;
-  private urlApiBasePath = environment.urlApiBasePath;
+
+  token = import.meta.env.NG_APP_API_KEY;
+  urlApiBasePath = import.meta.env.NG_APP_BASE_URL;
+  useMockApi = environment.mockApiData;
 
   getCitiesFiltered(stateId: number): Observable<City[]> {
     if (isPlatformBrowser(this.platformId)) {

@@ -5,7 +5,7 @@ import { catchError } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
 import { Home } from '../core/models/News';
 import { mockHomeService } from './moked-api/mockHomeService';
-import { environment } from '../../enviroments/enviroment';
+import { environment } from '../../enviroments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
@@ -16,9 +16,10 @@ export class HomeService {
     private mockHomeService: mockHomeService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
-  private token = environment.bearerToken;
-  private useMockApi = environment.mockApiData;
-  private urlApiBasePath = environment.urlApiBasePath;
+  token = import.meta.env.NG_APP_API_KEY;
+  urlApiBasePath = import.meta.env.NG_APP_BASE_URL;
+  useMockApi = environment.mockApiData;
+
   getHomePage(): Observable<Home> {
     if (isPlatformBrowser(this.platformId)) {
       if (this.useMockApi) {
