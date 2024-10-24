@@ -1,3 +1,9 @@
-.container{
-    box-shadow: 1px -2px 18px 0px rgba(0, 0, 0, 0.75);
+.container {
+  box-shadow: 1px -2px 18px 0px rgba(0, 0, 0, 0.75);
+  max-width: 80%;
+  background-color: #f6f6f6;
+}
+
+body {
+  background-color: #f6f6f6;
 }

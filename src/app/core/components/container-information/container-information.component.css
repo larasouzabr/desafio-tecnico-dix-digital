@@ -1,27 +1,73 @@
 .main-content {
-    width: 100%;
-    min-height: 200px;
-    padding: 12px;
-        border-radius: 0px 8px 0px 8px;
+  width: 100%;
+  border-radius: 0px 8px 0px 8px;
+  font-family: "Montserrat", sans-serif;
+}
+.main-content .section-name {
+  padding-top: 2rem;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 0.5rem;
+}
+h5 {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-h5{
-    text-transform: uppercase;
+.divider {
+  width: 4px;
+  height: 6rem;
 }
 
-.main-content.bg-red {
-    background-color: #CC0000;
-    color: #f0f0f0;
+.main-content .section-name .icon-representing-ul {
+  width: 18px;
+  height: 21px;
+  border-radius: 0px 4px 0px 4px;
 }
 
-.icon-representing-ul {
-    background-color: #CC0000;
-    width: 18px;
-    height: 21px;
-    border-radius: 0px 3px 0px 3px;
-    margin-right: 0.3rem;
+.main-content.red {
+  background-color: #cc0000;
+  color: #ffffff;
 }
 
-.icon-representing-ul.bg-red {
-    background-color: #AFA9A9;
+.main-content.red .section-name {
+  color: #ffff;
+}
+
+.main-content.red .section-name .icon-representing-ul {
+  background-color: #afa9a9;
+}
+.main-content.red .divider {
+  background-color: #ffff;
+}
+.main-content.red h5,
+.main-content.red .news-title,
+.main-content.red .description {
+  color: #ffff;
+}
+
+.main-content.white {
+  background-color: #ffffff;
+}
+
+.main-content.white .section-name {
+  background-color: #ffffff;
+}
+
+.main-content.white .icon-representing-ul {
+  background-color: #cc0000;
+}
+
+.main-content.white .news-title {
+  color: #cc0000;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-content.white h5,
+.main-content.white .description {
+  color: #000000;
+}
+.main-content.white .divider {
+  background-color: #cc0000;
 }

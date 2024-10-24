@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DestaquesComponent } from '../../core/components/destaques/destaques.component';
 import { MostReadComponent } from '../../core/components/most-read/most-read.component';
 import { ContainerInformationComponent } from '../../core/components/container-information/container-information.component';
-import { Banner, City, Home } from '../../core/models/News';
+import { City, Home } from '../../core/models/News';
 import { HomeService } from '../../api/homeService';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -34,7 +34,7 @@ export class HomepageComponent implements OnInit {
 
         console.log(this.homePage);
       },
-      error: (error) => this.handleError(error),
+      error: (error: HttpErrorResponse) => this.handleError(error),
     });
   }
 

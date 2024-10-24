@@ -1,10 +1,7 @@
-<div class="main-content" [ngClass]="{ 'bg-red': bgColor === 'red' }">
-  <div class="section-name d-flex align-items-center red-background">
-    <div
-      class="icon-representing-ul"
-      [ngClass]="{ 'bg-red': bgColor === 'red' }"
-    ></div>
-    <h5>{{sectionName}}</h5>
+<div class="main-content" [ngClass]="theme">
+  <div class="section-name d-flex align-items-strech">
+    <div class="icon-representing-ul"></div>
+    <h5>{{ sectionName }}</h5>
   </div>
   <div class="d-flex">
     <div class="col-md-4 col-lg-6">
@@ -14,7 +11,29 @@
       <app-small-card-component
         [news]="newsList"
         flexType="column"
+        [ngClass]="theme"
       ></app-small-card-component>
+    </div>
+  </div>
+  <div class="no-img-highlight d-flex justify-content-between mt-4">
+    <div class="col-lg-6">
+      <div class="card-news">
+        <span class="news-title mt-3">TITULO NOTICIA</span>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare
+          lacus in libero vestibulum, vel luctus orci sodales.
+        </p>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="col-lg-5">
+      <div class="card-news">
+        <span class="news-title mt-3">TITULO NOTICIA</span>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare
+          lacus in libero vestibulum, vel luctus orci sodales.
+        </p>
+      </div>
     </div>
   </div>
 </div>

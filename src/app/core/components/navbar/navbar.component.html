@@ -36,7 +36,12 @@
   <div class="collapse navbar-collapse container mt-3" id="navbarNav">
     <ul class="navbar-nav categories">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a
+          class="nav-link"
+          [routerLink]="['/home']"
+          routerLinkActive="nav-link-active"
+          >Home</a
+        >
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Estado</a>
@@ -63,7 +68,12 @@
         <a class="nav-link" href="#">Entretenimento</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Colunista</a>
+        <a
+          class="nav-link"
+          [routerLink]="['/section-page']"
+          routerLinkActive="nav-link-active"
+          >Colunista</a
+        >
       </li>
     </ul>
   </div>

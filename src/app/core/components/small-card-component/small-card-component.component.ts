@@ -7,10 +7,10 @@ import { News } from '../../models/News';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './small-card-component.component.html',
-  styleUrl: './small-card-component.component.css'
+  styleUrl: './small-card-component.component.css',
 })
 export class SmallCardComponentComponent {
   @Input() news: News[] = [];
   @Input() flexType: string = 'row';
-
+  @Input() theme: string = '';
 }
