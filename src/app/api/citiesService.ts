@@ -4,8 +4,8 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
 import { City } from '../core/models/News';
-import { appConfigService } from './appConfigService';
 import { mockCitiesService } from './moked-api/mockCitiesService';
+import { environment } from '../../enviroments/enviroment';
 @Injectable({
   providedIn: 'root',
 })
@@ -13,18 +13,20 @@ export class CitiesService {
   constructor(
     private http: HttpClient,
     private mockCitiesService: mockCitiesService,
-    @Inject(PLATFORM_ID) private platformId: Object,
-    private appConfig: appConfigService
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
+  private token = environment.bearerToken;
+  private useMockApi = environment.mockApiData;
+  private urlApiBasePath = environment.urlApiBasePath;
 
   getCitiesFiltered(stateId: number): Observable<City[]> {
     if (isPlatformBrowser(this.platformId)) {
-      if (this.appConfig.useMockApi) {
+      if (this.useMockApi) {
         return this.mockCitiesService.getCitiesFiltered(stateId);
       } else {
-        const url = `${this.appConfig.urlApiBasePath}/cities?state=${stateId}`;
+        const url = `${this.urlApiBasePath}/cities?state=${stateId}`;
         const headers = new HttpHeaders({
-          Authorization: `Bearer ${this.appConfig.bearerToken}`,
+          Authorization: `Bearer ${this.token}`,
         });
         return this.http
           .get<City[]>(url, { headers })
@@ -36,12 +38,12 @@ export class CitiesService {
   }
   getAllCities(): Observable<City[]> {
     if (isPlatformBrowser(this.platformId)) {
-      if (this.appConfig.useMockApi) {
+      if (this.useMockApi) {
         return this.mockCitiesService.getAllCities();
       } else {
-        const url = `${this.appConfig.urlApiBasePath}/cities`;
+        const url = `${this.urlApiBasePath}/cities`;
         const headers = new HttpHeaders({
-          Authorization: `Bearer ${this.appConfig.bearerToken}`,
+          Authorization: `Bearer ${this.token}`,
         });
         return this.http
           .get<City[]>(url, { headers })

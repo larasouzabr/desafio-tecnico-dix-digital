@@ -8,7 +8,6 @@ import {
   withFetch,
   withInterceptorsFromDi,
 } from '@angular/common/http';
-import { appConfigService } from './api/appConfigService';
 import { HomeService } from './api/homeService';
 
 export const appConfig: ApplicationConfig = {
@@ -18,7 +17,6 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withInterceptorsFromDi()),
     provideHttpClient(withFetch()),
     provideClientHydration(),
-    appConfigService,
     CitiesService,
     HomeService,
   ],

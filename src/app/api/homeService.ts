@@ -4,8 +4,8 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
 import { Home } from '../core/models/News';
-import { appConfigService } from './appConfigService';
 import { mockHomeService } from './moked-api/mockHomeService';
+import { environment } from '../../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root',
@@ -14,18 +14,19 @@ export class HomeService {
   constructor(
     private http: HttpClient,
     private mockHomeService: mockHomeService,
-    @Inject(PLATFORM_ID) private platformId: Object,
-    private appConfig: appConfigService
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
-
+  private token = environment.bearerToken;
+  private useMockApi = environment.mockApiData;
+  private urlApiBasePath = environment.urlApiBasePath;
   getHomePage(): Observable<Home> {
     if (isPlatformBrowser(this.platformId)) {
-      if (this.appConfig.useMockApi) {
+      if (this.useMockApi) {
         return this.mockHomeService.getHomePage();
       } else {
-        const url = `${this.appConfig.urlApiBasePath}/home-page`;
+        const url = `${this.urlApiBasePath}/home-page`;
         const headers = new HttpHeaders({
-          Authorization: `Bearer ${this.appConfig.bearerToken}`,
+          Authorization: `Bearer ${this.token}`,
         });
         return this.http
           .get<Home>(url, { headers })
