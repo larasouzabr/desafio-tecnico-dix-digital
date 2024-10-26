@@ -5,6 +5,7 @@ import { ContainerInformationComponent } from '../../core/components/container-i
 import { City, Home } from '../../core/models/News';
 import { HomeService } from '../../api/homeService';
 import { HttpErrorResponse } from '@angular/common/http';
+import { NewsletterComponent } from "../../core/components/newsletter/newsletter.component";
 
 @Component({
   selector: 'app-homepage',
@@ -13,7 +14,8 @@ import { HttpErrorResponse } from '@angular/common/http';
     DestaquesComponent,
     MostReadComponent,
     ContainerInformationComponent,
-  ],
+    NewsletterComponent
+],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })

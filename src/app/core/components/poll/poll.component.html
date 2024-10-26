@@ -1,0 +1,37 @@
+<section class="poll-component p-4">
+  <div class="poll-header d-flex align-items-center mb-3">
+    <i class="bi bi-square-fill text-danger me-2"></i>
+    <h4 class="mb-0">ENQUETE</h4>
+  </div>
+
+  <p>{{ poll.question }}</p>
+
+  <form>
+    <div class="form-check" *ngFor="let option of poll.options; let i = index">
+      <input
+        class="form-check-input"
+        type="radio"
+        [id]="'option' + i"
+        [value]="option.value"
+        name="pollOptions"
+        [(ngModel)]="poll.selectedOption"
+      />
+      <label class="form-check-label" [for]="'option' + i">
+        {{ option.label }}
+      </label>
+    </div>
+
+    <div class="d-grid gap-2 mt-4">
+      <app-button
+        size="large"
+        [color]="'red'"
+        (click)="poll.selectedOption && onVote(poll.selectedOption)"
+      >
+        Votar
+      </app-button>
+      <app-button [color]="'red'" [variant]="'outlined'" (click)="viewMore()">
+        Ver mais
+      </app-button>
+    </div>
+  </form>
+</section>

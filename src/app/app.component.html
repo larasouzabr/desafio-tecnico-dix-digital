@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="container">
+<div class="container pb-4 d-flex flex-column">
   <img src="https://placehold.co/1536x155" class="img-fluid" alt="..." />
   <link
     rel="stylesheet"
@@ -15,5 +15,10 @@
       <app-aside></app-aside>
     </aside>
   </div>
-  <app-cookie-notice></app-cookie-notice>
+  <app-newsletter
+    class="d-flex justify-content-center"
+    *ngIf="isHomeRoute"
+  ></app-newsletter>
 </div>
+<app-footer></app-footer>
+<app-cookie-notice></app-cookie-notice>

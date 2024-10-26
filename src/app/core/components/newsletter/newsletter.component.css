@@ -1,0 +1,35 @@
+.newsletter-side {
+  background-color: #454545;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.form-control-newsletter {
+  text-align: center;
+  background-color: #fff;
+  padding-bottom: 12px;
+}
+.input-group-form {
+  justify-content: center;
+}
+.form-control {
+  background-color: #f4f4f4;
+  color: #4a4a4a;
+  font-size: medium;
+  font-style: italic;
+}
+.group-input {
+  text-align: left;
+}
+.rounded-section {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.underline {
+  text-decoration: underline;
+}

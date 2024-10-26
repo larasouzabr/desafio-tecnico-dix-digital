@@ -1,6 +1,12 @@
 <button
   class="custom-button"
-  [ngClass]="{ outlined: variant === 'outlined', solid: variant === 'solid' }"
+  [ngClass]="{
+    outlined: variant === 'outlined',
+    solid: variant === 'solid',
+    'btn-large': size === 'large',
+    'btn-md': size === 'md',
+    'btn-sm': size === 'sm'
+  }"
   [style.--button-color]="buttonColor"
   (click)="handleClick()"
 >
