@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Poll } from '../../models/Poll';
-import { ButtonComponent } from "../button/button.component";
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-poll',
@@ -27,7 +27,7 @@ export class PollComponent {
 
   onVote(optionValue: string) {
     this.poll.selectedOption = optionValue;
-    console.log('Opção selecionada: ', this.poll.selectedOption);
+    alert(`Opção selecionada: ${this.poll.selectedOption}`);
   }
 
   viewMore() {

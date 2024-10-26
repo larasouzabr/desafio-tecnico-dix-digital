@@ -5,13 +5,13 @@ import { Colunist } from '../../core/models/News';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-section-page',
+  selector: 'app-colunist-page',
   standalone: true,
   imports: [CardSectionPageComponent, CommonModule],
-  templateUrl: './section-page.component.html',
-  styleUrl: './section-page.component.css',
+  templateUrl: './colunists-page.component.html',
+  styleUrl: './colunists-page.component.css',
 })
-export class SectionPageComponent {
+export class ColunistsPageComponent {
   colunists: Colunist[] = [];
 
   constructor(private colunistService: ColunistService) {}

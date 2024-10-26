@@ -9,6 +9,7 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { HomeService } from './api/homeService';
+import { CommonModule, DatePipe } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,7 +18,9 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withInterceptorsFromDi()),
     provideHttpClient(withFetch()),
     provideClientHydration(),
+    CommonModule,
     CitiesService,
     HomeService,
+    DatePipe,
   ],
 };

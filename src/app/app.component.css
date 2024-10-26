@@ -7,3 +7,6 @@
 body {
   background-color: #f6f6f6;
 }
+aside {
+  border-left: 1px solid #c9c7c7;
+}

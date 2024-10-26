@@ -24,38 +24,33 @@ img {
   transform: scale(1.03);
 }
 
-.column-name {
-  color: #cc0000;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.colunist-name {
-  text-transform: capitalize;
-  font-weight: 500;
+.report-name {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+.img-large {
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
 }
 
-.column-name,
-.colunist-name,
-.column-description {
-  transition: font-size 0.3s ease;
+img.showcontent {
+  width: 950px;
+  height: 500px;
 }
 
-.card-body-items:hover .column-name {
-  font-size: 1em;
+.report-content.showcontent {
+  max-width: 100%;
 }
-
-.card-body-items:hover .colunist-name {
-  font-size: 1em;
+.report-date-published {
+  font-size: 12px;
+  color: #636363b2;
 }
-
-.card-body-items:hover .column-description {
-  font-size: 1em;
-}
-

@@ -1,26 +1,89 @@
-<div class="card-body-items d-flex flex-row mt-5" [routerLink]="['/report']">
+<div *ngIf="!showFullContent" class="card-body-items d-flex flex-row mt-5">
   <div class="img">
     <img
       [src]="report.img ? report.img : 'https://placehold.co/200x200'"
       class="img-fluid"
-      alt="Imagem do reporta"
+      alt="Imagem da noticia"
     />
   </div>
   <div class="d-flex flex-column ml-4 info-section">
-    <span class="report-name"> {{ report.title }}</span>
-    <span class="report-name"> {{ report.content }}</span>
-    <span class="column-description"> Publicado - {{ report.date }}</span>
-    <ul class="social-media d-flex flex-row justify-content-end">
-      <li class="social-item">
-        <a class="nav-link" href="#"><i class="bi bi-facebook"></i></a>
-      </li>
-      <li class="social-item">
-        <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
-      </li>
-      <li class="social-item">
-        <a class="nav-link" href="#"><i class="bi bi-whatsapp"></i></a>
-      </li>
-    </ul>
+    <span class="report-name">
+      <strong>{{ report.title }}</strong>
+    </span>
+    <span class="report-content">
+      <span *ngIf="!showFullContent"
+        >{{ report.content | slice : 0 : 150 }}...</span
+      >
+      <span *ngIf="showFullContent">{{ report.content }}</span>
+    </span>
+    <span class="report-date-published">
+      Publicado - {{ report.date | date : "dd/MM/yyyy" }}</span
+    >
+    <div class="d-flex g-5 justify-content-end">
+      <app-button
+        variant="outlined"
+        class="mx-auto"
+        color="red"
+        (click)="toggleContent()"
+      >
+        Ler mais
+      </app-button>
+      <ul class="social-media d-flex flex-row justify-content-end">
+        <li class="social-item">
+          <a class="nav-link" href="#"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li class="social-item">
+          <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
+        </li>
+        <li class="social-item">
+          <a class="nav-link" href="#"><i class="bi bi-whatsapp"></i></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
-title: string; content: string; date: string; mainHeadline: string; img: string;
+
+<div *ngIf="showFullContent" class="card-body-items d-flex flex-column mt-5">
+  <div class="img">
+    <img
+      [src]="report.img ? report.img : 'https://placehold.co/950x500'"
+      class="img-fluid showcontent"
+      alt="Imagem do reporter"
+    />
+  </div>
+  <div class="d-flex flex-column ml-4 info-section showcontent">
+    <span class="report-name">
+      <strong>{{ report.title }}</strong>
+    </span>
+    <span class="column-published-date">
+      Publicado - {{ report.date | date : "dd/MM/yyyy" }}</span
+    >
+    <span class="column-description"> {{ report.mainHeadline }}</span>
+    <div class="social-media-div d-flex flex-column align-items-end">
+      <span>Compartilhar com</span>
+      <ul class="social-media d-flex flex-row justify-content-end">
+        <li class="social-item">
+          <a class="nav-link" href="#"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li class="social-item">
+          <a class="nav-link" href="#"><i class="bi bi-twitter"></i></a>
+        </li>
+        <li class="social-item">
+          <a class="nav-link" href="#"><i class="bi bi-whatsapp"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <span class="report-content showcontent">
+      <span class="">{{ report.content }}</span>
+    </span>
+    <app-button
+      variant="outlined"
+      class="d-flex flex-row justify-content-center"
+      color="red"
+      (click)="toggleContent()"
+    >
+      {{ showFullContent ? "Ler menos" : "Ler mais" }}
+    </app-button>
+  </div>
+</div>

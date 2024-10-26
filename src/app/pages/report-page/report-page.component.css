@@ -1,0 +1,10 @@
+.reportagens-container {
+  border-top: 1px solid #c9c7c7;
+}
+.publicity {
+  padding: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  color: #1b151480;
+}

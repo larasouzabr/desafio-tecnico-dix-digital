@@ -1,12 +1,11 @@
-
 .custom-button {
-    border-radius: 0px 8px 0px 8px;
-    padding: 10px 51px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s;
-    outline: none;
-    border: 2px solid transparent;
+  border-radius: 0px 8px 0px 8px;
+  padding: 10px 51px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  border: 2px solid transparent;
 }
 .btn-large {
   padding: 12px 24px;
@@ -24,20 +23,20 @@
 }
 
 .custom-button.solid {
-    color: white;
-    background-color: var(--button-color);
+  color: white;
+  background-color: var(--button-color);
 }
 
 .custom-button.outlined {
-    background-color: transparent;
-    border: 2px solid var(--button-color);
-    color: var(--button-color);
+  background-color: transparent;
+  border: 2px solid var(--button-color);
+  color: var(--button-color);
 }
 
 .custom-button.solid:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .custom-button.outlined:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }

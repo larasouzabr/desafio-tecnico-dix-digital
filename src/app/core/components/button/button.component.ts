@@ -12,7 +12,7 @@ export class ButtonComponent {
   @Input() variant: 'outlined' | 'solid' = 'solid';
   @Input() color: 'red' | 'blue' = 'blue';
   @Input() onClick: (() => void) | undefined;
-  @Input() size: 'large' | 'md' | 'sm' = 'md';
+  @Input() width: string | null = null;
 
   colorMap = {
     red: '#CC0000',
@@ -25,16 +25,6 @@ export class ButtonComponent {
     }
   }
 
-  get buttonSizeClass(): string {
-    switch (this.size) {
-      case 'large':
-        return 'btn-large';
-      case 'sm':
-        return 'btn-sm';
-      default:
-        return 'btn-md';
-    }
-  }
   get buttonColor(): string {
     return this.colorMap[this.color];
   }
